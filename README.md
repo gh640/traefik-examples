@@ -1,6 +1,6 @@
 # Traefik examples
 
-Examples to use Traefik reverse proxy with `docker-compose`.
+Examples to use [Traefik reverse proxy](https://traefik.io/) with `docker-compose`.
 
 ## Examples
 
