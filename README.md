@@ -4,11 +4,11 @@ Examples to use [Traefik reverse proxy](https://traefik.io/) with `docker-compos
 
 ## Examples
 
-- `whoami`: Single service with `traefik/whoami`
-- `nginx`: Multiple services with `nginx`
-- `https-with-traefik-default-cert`: https (TLS) using Traefik default self-signed certificate
-- `https-with-self-signed-cert`: https (TLS) using self-signed certificate
-- `https-with-letsencrypt`: https (TLS) using Let's Encrypt
+1. `whoami`: Single service with `traefik/whoami`
+1. `nginx`: Multiple services with `nginx`
+1. `https-with-traefik-default-cert`: https (TLS) using Traefik default self-signed certificate
+1. `https-with-self-signed-cert`: https (TLS) using self-signed certificate
+1. `https-with-letsencrypt`: https (TLS) using Let's Encrypt
 
 ## Usage
 
