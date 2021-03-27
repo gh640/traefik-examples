@@ -1,4 +1,4 @@
-# openssl で自己証明証明書を作成するためのイメージを定義する
+# Define an image to generate a self-signed certificate with.
 FROM alpine:3
 
 WORKDIR /app
