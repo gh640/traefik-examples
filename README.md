@@ -6,6 +6,7 @@ Examples to use [Traefik reverse proxy](https://traefik.io/) with `docker-compos
 
 - `whoami`: Single service with `traefik/whoami`
 - `nginx`: Multiple services with `nginx`
+- `https-with-self-signed-cert`: https (TLS) using self-signed certificate
 - `https-with-letsencrypt`: https (TLS) using Let's Encrypt
 
 ## Usage
@@ -31,6 +32,20 @@ docker-compose up -d
 ```bash
 http 127.0.0.1 Host:tako.example.com
 http 127.0.0.1 Host:ika.example.com
+```
+
+### `https-with-self-signed-cert`
+
+```bash
+cd repo-root/https-with-self-signed-cert/
+echo 'DOMAIN=localhost' > .env
+docker-compose up -d
+```
+
+The certificate is stored in a Docker volume named `certs`. Please clear the volume once you've finished.
+
+```bash
+docker volume rm https-with-self-signed-cert_certs
 ```
 
 ### `https-with-letsencrypt`
