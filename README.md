@@ -1,6 +1,6 @@
 # Traefik examples
 
-Examples to use [Traefik reverse proxy](https://traefik.io/) with `docker-compose`.
+Examples to use [Traefik reverse proxy](https://traefik.io/) v2 with `docker-compose`.
 
 ## Examples
 
@@ -92,3 +92,8 @@ The certificate is stored in a Docker volume named `letsencrypt`. Please clear t
 ```bash
 docker volume rm https-with-letsencrypt_letsencrypt
 ```
+
+## Links
+
+- [GitHub - traefik/traefik: The Cloud Native Application Proxy](https://github.com/traefik/traefik)
+- [Traefik](https://doc.traefik.io/traefik/)
