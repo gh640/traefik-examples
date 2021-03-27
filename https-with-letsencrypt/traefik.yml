@@ -8,6 +8,7 @@ providers:
 entryPoints:
   web:
     address: ":80"
+    # `redirections` works with `httpChallenge`.
     http:
       redirections:
         entryPoint:
