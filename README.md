@@ -6,6 +6,7 @@ Examples to use [Traefik reverse proxy](https://traefik.io/) with `docker-compos
 
 - `whoami`: Single service with `traefik/whoami`
 - `nginx`: Multiple services with `nginx`
+- `https-with-traefik-default-cert`: https (TLS) using Traefik default self-signed certificate
 - `https-with-self-signed-cert`: https (TLS) using self-signed certificate
 - `https-with-letsencrypt`: https (TLS) using Let's Encrypt
 
@@ -34,12 +35,28 @@ http 127.0.0.1 Host:tako.example.com
 http 127.0.0.1 Host:ika.example.com
 ```
 
+### `https-with-traefik-default-cert`
+
+```bash
+cd repo-root/https-with-traefik-default-cert/
+echo 'DOMAIN=localhost' > .env
+docker-compose up -d
+```
+
+```bash
+http --verify=no --default-scheme=https localhost
+```
+
 ### `https-with-self-signed-cert`
 
 ```bash
 cd repo-root/https-with-self-signed-cert/
 echo 'DOMAIN=localhost' > .env
 docker-compose up -d
+```
+
+```bash
+http --verify=no --default-scheme=https localhost
 ```
 
 The certificate is stored in a Docker volume named `certs`. Please clear the volume once you've finished.
@@ -59,7 +76,7 @@ docker-compose up -d
 ```
 
 ```bash
-http --verify no --default-scheme=https [IP] Host:mydomain.com
+http --verify=no --default-scheme=https [IP] Host:mydomain.com
 ```
 
 If you want to get a valid certificate, comment out the line for `caServer`:
